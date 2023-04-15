@@ -1,24 +1,22 @@
-<!DOCTYPE html>
+<!-- 360°閲覧できるビューワーのように、WEBサイトに3Dを埋め込む例 -->
 <html>
   <head>
-    <meta charset="UTF-8">
-    <title>クジラの生態について</title>
+    <!-- A-FrameをCDNから読み込む -->
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <!-- aframe-orbit-controlsをCDNから読み込む -->
+    <script src="https://unpkg.com/aframe-orbit-controls@1.2.0/dist/aframe-orbit-controls.min.js"></script>
   </head>
-  <body>
-    <h1>クジラあああああああああああああああああああの生態について</h1>
-    <p>クジラは海洋哺乳類の中でも最大級の存在であり、世界中の海に生息しています。</p>
-    <p>彼らは餌となるプランクトンや小魚を捕食するために、広大な海を旅します。</p>
-    <h2>クジラの種類</h2>
-    <p>クジラには、ブルーホエール、シャチ、シロナガスクジラ、ザトウクジラ、ハンドウイルカなど様々な種類がいます。</p>
-    <p>それぞれの種類によって体の大きさや形状、生息地などが異なります。</p>
-    <h2>クジラの特徴</h2>
-    <p>クジラは呼吸のために、表面に現れて空気を吸い込むことがあります。</p>
-    <p>そのときには、噴気孔から水蒸気と水が噴き出され、見た目にも美しい光景を見ることができます。</p>
-    <p>また、クジラは非常に長時間、深い海底で生活することができるため、耐圧性にも優れています。</p>
-    <h2>クジラの保護活動</h2>
-    <p>クジラは、漁業や海洋汚染、気候変動などの影響を受け、生息数が減少しています。</p>
-    <p>そのため、多くの国や地域でクジラの保護活動が行われています。</p>
-    <p>例えば、日本では商業捕鯨が行われていた時期がありましたが、現在は調査目的の捕鯨しか行われていません。</p>
-    <p>世界的にも、クジラの保護を目的とした国際条約が制定され、保護活動が進められています。</p>
-  </body>
+<body>
+  <a-scene>
+    <!-- aframe-orbit-controlsのプロパティを記述 -->
+    <a-entity camera look-controls orbit-controls="target: 0 1.6 -0.5; maxPolarAngle:180; minDistance: 0.5; maxDistance: 200; initialPosition: 0 0 30"></a-entity>
+    
+    <!-- 3Dモデルを読み込んで、位置やスケールなど定義する -->
+    
+    <a-box position="0 -1 0" rotation="20 124 7" color="#4CC3D9"></a-box>
+    <!-- 背景色-->
+    <a-sky color="#9EA1E7"></a-sky>
+
+  </a-scene>
+</body>
 </html>
